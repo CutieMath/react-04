@@ -6,10 +6,12 @@ import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 import "./App.css";
 
 const App = () => {
+  const activeMenu = true;
   return (
     <React.Fragment>
       <BrowserRouter>
         <div className="flex relative dark:bg-main-dark-bg">
+          {/* Gear */}
           <div className="fixed right-4 bottom-4" style={{ zIndex: "1000" }}>
             <TooltipComponent content="Settings" position="Top">
               <button
@@ -21,6 +23,21 @@ const App = () => {
               </button>
             </TooltipComponent>
           </div>
+
+          {/* Sidebar */}
+          {activeMenu ? (
+            <div className="w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white">
+              Sidebar
+            </div>
+          ) : (
+            <div className="w-0 dark:bg-secondary-dark-bg">Sidebar w-0</div>
+          )}
+
+          {/* NavBar */}
+          <div
+            className={`dark:bg-main-bg bg-main-bg min-h-screen w-full
+              ${activeMenu ? "md:ml-72" : "flex-2"}`}
+          ></div>
         </div>
       </BrowserRouter>
     </React.Fragment>
