@@ -13,6 +13,7 @@ const Home = () => {
   return (
     <div className="mt-12">
       <div className="flex flex-wrap lg:flex-nowrap justify-center">
+        {/* Welcome component */}
         <div className="bg-white m-2 dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full lg:w-80 p-8 pt-9 bg-hero-pattern bg-no-repat bg-cover ">
           <div className="flex justify-between items-center">
             <div>
@@ -29,6 +30,28 @@ const Home = () => {
               size="md"
             />
           </div>
+        </div>
+
+        {/* Cards */}
+        <div className="flex m-3 flex-wrap justify-center gap-1 items-center">
+          {earningData.map((item) => (
+            <div
+              key={item.title}
+              className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg md:w-56 p-4 pt-9 rounded-2xl"
+            >
+              <button
+                type="button"
+                style={{ color: item.iconColor, backgroundColor: item.iconBg }}
+                className="text-2xl opacity-0.9 rounded-full p-4 hover:drop-shadow-xl"
+              >
+                {item.icon}
+              </button>
+              <p className="mt-3">
+                <span className="text-lg font-semibold">{item.amount}</span>
+                <span>{item.percentage}</span>
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </div>
