@@ -4,7 +4,7 @@ import { FiSettings } from "react-icons/fi";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 import { Navbar, Footer, Sidebar, ThemeSettings } from "./components";
 import {
-  Dashboard,
+  Home,
   Orders,
   Calendar,
   Employees,
@@ -36,7 +36,7 @@ const App = () => {
               <button
                 type="button"
                 className="text-3xl p-3 hover:drop-shadow-x1 hover:bg-light-gray text-white"
-                style={{ background: "pink", borderRadius: "50%" }}
+                style={{ background: "#957DAD", borderRadius: "50%" }}
               >
                 <FiSettings />
               </button>
@@ -62,32 +62,32 @@ const App = () => {
             <div className="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full">
               <Navbar />
             </div>
-          </div>
 
-          {/* Routing */}
-          <div>
-            <Routes>
-              <Route path="/" element={<Dashboard />} />
-              <Route path="/dashboard" element={<Dashboard />} />
-              {/* Pages */}
-              <Route path="/orders" element={<Orders />} />
-              <Route path="/employees" element={<Employees />} />
-              <Route path="/customers" element={<Customers />} />
-              {/* Other Apps */}
-              <Route path="/kanban" element={<Kanban />} />
-              <Route path="/editor" element={<Editor />} />
-              <Route path="/calendar" element={<Calendar />} />
-              <Route path="/color-picker" element={<ColorPicker />} />
-              {/* Charts */}
-              <Route path="/line" element={<Line />} />
-              <Route path="/area" element={<Area />} />
-              <Route path="/bar" element={<Bar />} />
-              <Route path="/pie" element={<Pie />} />
-              <Route path="/financial" element={<Financial />} />
-              <Route path="/color-mapping" element={<ColorMapping />} />
-              <Route path="/pyramid" element={<Pyramid />} />
-              <Route path="/stacked" element={<Stacked />} />
-            </Routes>
+            {/* Routing */}
+            <div>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/home" element={<Home />} />
+                {/* Pages */}
+                <Route path="/orders" element={<Orders />} />
+                <Route path="/employees" element={<Employees />} />
+                <Route path="/customers" element={<Customers />} />
+                {/* Other Apps */}
+                <Route path="/kanban" element={<Kanban />} />
+                <Route path="/editor" element={<Editor />} />
+                <Route path="/calendar" element={<Calendar />} />
+                <Route path="/color-picker" element={<ColorPicker />} />
+                {/* Charts */}
+                <Route path="/line" element={<Line />} />
+                <Route path="/area" element={<Area />} />
+                <Route path="/bar" element={<Bar />} />
+                <Route path="/pie" element={<Pie />} />
+                <Route path="/financial" element={<Financial />} />
+                <Route path="/color-mapping" element={<ColorMapping />} />
+                <Route path="/pyramid" element={<Pyramid />} />
+                <Route path="/stacked" element={<Stacked />} />
+              </Routes>
+            </div>
           </div>
         </div>
       </BrowserRouter>

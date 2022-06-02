@@ -59,28 +59,28 @@ const Navbar = () => {
       <NavButton
         title="Menu"
         customFunc={() => setActiveMenu((prevActiveMenu) => !prevActiveMenu)}
-        color="pink"
+        color="#957DAD"
         icon={<AiOutlineMenu />}
       />
       <div className="flex">
         <NavButton
           title="Cart"
           customFunc={() => handleClick("cart")}
-          color="pink"
+          color="#957DAD"
           icon={<FiShoppingCart />}
         />
         <NavButton
           title="Chat"
           dotColor="red"
           customFunc={() => handleClick("chat")}
-          color="pink"
+          color="#957DAD"
           icon={<FiSmile />}
         />
         <NavButton
           title="Notifications"
           dotColor="red"
           customFunc={() => handleClick("notification")}
-          color="pink"
+          color="#957DAD"
           icon={<RiNotification3Line />}
         />
         <TooltipComponent content="Profile" position="BottomCenter">
