@@ -40,7 +40,7 @@ module.exports = {
       },
       backgroundImage: {
         "hero-pattern":
-          "url('https://64.media.tumblr.com/62977a65277b513e1a1c4d5e093c751a/0c7251eb5b7bebf7-c5/s1280x1920/60b71c25e268c331e66d8d070275c7c89c3fc043.jpg')",
+          "url('https://64.media.tumblr.com/3d1ccf3836410d8c14452691a5485a10/c97c5af4f165db2c-88/s2048x3072/e56a5726b941951717fb4e95357820c5e81c4812.pnj')",
       },
     },
   },
