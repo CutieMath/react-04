@@ -64,13 +64,13 @@ const Home = () => {
           <div className="flex justify-between">
             <p className="font-semibold text-xl">Revenue Updates</p>
             <div className="flex items-center gap-4">
-              <p className="flex cursor-pointer items-center gap-2 text-gray-600 hover:drop-shadow-xl">
+              <p className="flex items-center gap-2 text-gray-600 hover:drop-shadow-xl">
                 <span>
                   <GoPrimitiveDot />
                 </span>
                 <span>Expense</span>
               </p>
-              <p className="flex cursor-pointer items-center gap-2 text-green-400 hover:drop-shadow-xl">
+              <p className="flex items-center gap-2 text-green-400 hover:drop-shadow-xl">
                 <span>
                   <GoPrimitiveDot />
                 </span>
@@ -78,6 +78,8 @@ const Home = () => {
               </p>
             </div>
           </div>
+
+          {/* Sparkline Chart Section  */}
           <div className="mt-10 flex gap-10 flex-wrap justify-center">
             <div className="border-r-1 border-color m-4 pr-10">
               <div>
@@ -106,6 +108,20 @@ const Home = () => {
                   color="#957DAD"
                 />
               </div>
+              <div className="mt-10">
+                <Button
+                  color="white"
+                  bgColor="#957DAD"
+                  text="Download Report"
+                  borderRadius="10px"
+                  size="md"
+                />
+              </div>
+            </div>
+
+            {/* Stacked Chart Section */}
+            <div>
+              <Stacked width="320px" height="360px" />
             </div>
           </div>
         </div>
