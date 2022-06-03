@@ -63,8 +63,11 @@ const App = () => {
               <Navbar />
             </div>
 
-            {/* Routing */}
             <div>
+              {/* Theme Settings */}
+              <ThemeSettings />
+
+              {/* Routing */}
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/home" element={<Home />} />
