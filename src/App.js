@@ -25,10 +25,15 @@ import "./App.css";
 import { useStateContext } from "./contexts/ContextProvider";
 
 const App = () => {
-  const { activeMenu, themeSettings, setThemeSettings, currentColor } =
-    useStateContext();
+  const {
+    activeMenu,
+    themeSettings,
+    setThemeSettings,
+    currentColor,
+    currentMode,
+  } = useStateContext();
   return (
-    <React.Fragment>
+    <div className={currentMode === "Dark" ? "dark" : "light"}>
       <BrowserRouter>
         <div className="flex relative dark:bg-main-dark-bg">
           {/* Gear */}
@@ -58,7 +63,7 @@ const App = () => {
 
           {/* NavBar */}
           <div
-            className={`dark:bg-main-bg bg-main-bg min-h-screen w-full
+            className={`dark:bg-main-dark-bg bg-main-bg min-h-screen w-full
               ${activeMenu ? "md:ml-72" : "flex-2"}`}
           >
             <div className="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full">
@@ -96,7 +101,7 @@ const App = () => {
           </div>
         </div>
       </BrowserRouter>
-    </React.Fragment>
+    </div>
   );
 };
 
