@@ -26,7 +26,7 @@ const Sidebar = () => {
   return (
     <div
       className="ml-3 h-screen 
-    md:overflow-hidden over-flow-auto 
+    md:overflow-hidden overflow-auto 
     md:hover:overflow-auto pb-10"
     >
       {activeMenu && (
@@ -55,6 +55,7 @@ const Sidebar = () => {
               </button>
             </TooltipComponent>
           </div>
+
           <div className="mt-10">
             {links.map((item) => (
               <div key={item.title}>
